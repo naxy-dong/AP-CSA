@@ -1,0 +1,35 @@
+This code is not fit for the activity. The attributes is set by the constructor, not the user input.
+
+  public void setName(){
+    Scanner jIn = new Scanner(System.in);
+    System.out.println("What's the name of your human?");
+    personName = jIn.nextLine();
+  }
+
+  public void setAge(){
+    Scanner jIn = new Scanner(System.in);
+    System.out.println("How old do you want your human to be?");
+    personAge = jIn.nextInt();
+  }
+  
+  public void setHair()
+  {
+    Scanner jIn = new Scanner(System.in);
+    System.out.println("What hair color do you want your human to have? Press 1 for brown. Press 2 for black. Press 3 for blonde.");
+    colorNumber = jIn.nextInt();
+    if(colorNumber==1)
+    {
+      hairColor="brown";
+    }else
+      if(colorNumber==2)
+      {
+        hairColor="black";
+      }else
+        if(colorNumber==3)
+        {
+          hairColor="blonde";
+        }else{
+          System.out.println("Not a valid number, try again.");
+          setHair();
+        }
+  }
